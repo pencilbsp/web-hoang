@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Lựa Chọn Games" />
+    <meta name="keywords" content="Sàn, giao, dịch, nhị, phân" />
+
+    <title>Đăng nhập hệ thống - Lựa Chọn Games</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="/js/alpinejs.min.js" defer></script>
+    <style>
+      [wire\:loading],
+      [wire\:loading\.delay],
+      [wire\:loading\.inline-block],
+      [wire\:loading\.inline],
+      [wire\:loading\.block],
+      [wire\:loading\.flex],
+      [wire\:loading\.table],
+      [wire\:loading\.grid] {
+        display: none;
+      }
+      [wire\:offline] {
+        display: none;
+      }
+      [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+      }
+      input:-webkit-autofill,
+      select:-webkit-autofill,
+      textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+      }
+      @keyframes livewireautofill {
+        from {
+        }
+      }
+
+      /* body {
+        height: 100vh;
+      } */
+      .container {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper vh-100" style="background: url(/images/4e4856774f678339da76.jpeg) no-repeat center center; background-size: cover">
+      <div class="container">
+        <!-- <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center text-uppercase mt-4 mb-4">Lựa Chọn Games</h2>
+          </div>
+        </div> -->
+
+        <div class="row h-100 align-content-center">
+          <div class="col-md-10 offset-md-1">
+            <div class="row mb-3">
+              <div class="col-12 col-md-8 col-lg-6 offset-md-3">
+                <div class="card">
+                  <div class="card-body p-4">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h4 class="h4 text-uppercase text-center text-secondary mb-3">Đăng nhập hệ thống</h4>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-4 mb-3">
+                        <img src="/images/img1.jpg" class="w-100" />
+                      </div>
+
+                      <div class="col-4 mb-3">
+                        <img src="/images/img2.jpg" class="w-100" />
+                      </div>
+
+                      <div class="col-4 mb-3">
+                        <img src="/images/img3.jpg" class="w-100" />
+                      </div>
+
+                      <div class="col-4 mb-3">
+                        <img src="/images/img4.jpg" class="w-100" />
+                      </div>
+
+                      <div class="col-4 mb-3">
+                        <img src="/images/img5.jpg" class="w-100" />
+                      </div>
+
+                      <div class="col-4 mb-3">
+                        <img src="/images/img6.jpg" class="w-100" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form autocomplete="off" id="login-form" class="needs-validation" novalidate>
+                          <div class="mb-3">
+                            <label class="form-label text-uppercase fw-bold">Username</label>
+                            <input
+                              name="username"
+                              type="text"
+                              class="form-control"
+                              placeholder="Nhập tài khoản đăng nhập"
+                              required
+                            />
+                            <div class="invalid-feedback">Tên đăng nhập không được bỏ trống</div>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label text-uppercase fw-bold">Password</label>
+                            <input
+                              name="password"
+                              type="password"
+                              class="form-control"
+                              placeholder="Nhập mật khẩu"
+                              required
+                            />
+                            <div class="invalid-feedback">Mật khẩu không được bỏ trống</div>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label text-uppercase fw-bold"
+                              >Mã phần mềm - nhận tại Hotline/Zalo:
+                            </label>
+                            <input
+                              name="code"
+                              type="text"
+                              class="form-control"
+                              placeholder="Nhập mã phần mềm"
+                              required
+                            />
+                            <div id="code-invalid" class="invalid-feedback">Mã phần mềm không được bỏ trống</div>
+                          </div>
+
+                          <button id="submit-btn" class="btn btn-primary text-uppercase fw-bold w-100">
+                            Đăng nhập
+                          </button>
+                        </form>
+                      </div>
+
+                      <div class="col-md-12 mt-3">
+                        <div class="progress" id="progress" style="display: none">
+                          <div
+                            class="progress-bar progress-bar-striped progress-bar-animated"
+                            role="progressbar"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style="width: 0%"
+                          ></div>
+                        </div>
+
+                        <div id="process-alert" class="alert alert-info mt-3" role="alert" style="display: none">
+                          Hệ thống đang xử lý, vui lòng chờ trong ít phút...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

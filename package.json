@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "build:css": "postcss src/input.css -o public/css/style.css"
+ },
+
+  "devDependencies": {
+    "tailwindcss": "^3.0.21"
+  }
+}
