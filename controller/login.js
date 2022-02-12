@@ -1,25 +1,28 @@
-const Yup = require('yup')
-
-const loginSchema = Yup.object().shape({
-  code: Yup.string().required('Mã phần mềm không được bỏ trống'),
-  username: Yup.string().required('Tên đăng nhập không được bỏ trống'),
-  password: Yup.string().required('Mật khẩu không được bỏ trống'),
-})
+const dataType = {
+  sgd: [
+    '/images/login/1.jpeg',
+    '/images/login/2.jpeg',
+    '/images/login/3.jpeg',
+    '/images/login/4.jpeg',
+    '/images/login/5.jpeg',
+    '/images/login/6.jpeg',
+  ],
+  games: [
+    '/images/img1.jpg',
+    '/images/img2.jpg',
+    '/images/img3.jpg',
+    '/images/img4.jpg',
+    '/images/img5.jpg',
+    '/images/img6.jpg',
+  ]
+}
 
 const login = async (req, res) => {
   try {
-    await loginSchema.validate(req.body)
-    const { code, password, username } = req.body
+    const type = req.query.type
+    if (type === 'games') return res.render('login', { data: dataType.games })
 
-    if (code !== 'VN1902') {
-      return res.json({
-        success: false,
-        path: 'code',
-        message: 'Mã phần mềm không hỗ trợ trên Phone, PC này của bạn, mời bạn nâng cấp gói phần mềm khác',
-      })
-    }
-
-    return res.json({ success: true })
+    return res.render('login', { data: dataType.sgd })
   } catch (error) {
     let message, path
 

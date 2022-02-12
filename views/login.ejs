@@ -68,29 +68,11 @@
                     </div>
 
                     <div class="row">
-                      <div class="col-4 mb-3">
-                        <img src="/images/login/1.jpeg" class="w-100" />
-                      </div>
-
-                      <div class="col-4 mb-3">
-                        <img src="/images/login/2.jpeg" class="w-100" />
-                      </div>
-
-                      <div class="col-4 mb-3">
-                        <img src="/images/login/3.jpeg" class="w-100" />
-                      </div>
-
-                      <div class="col-4 mb-3">
-                        <img src="/images/login/4.jpeg" class="w-100" />
-                      </div>
-
-                      <div class="col-4 mb-3">
-                        <img src="/images/login/5.jpeg" class="w-100" />
-                      </div>
-
-                      <div class="col-4 mb-3">
-                        <img src="/images/login/6.jpeg" class="w-100" />
-                      </div>
+                      <% data.forEach(function(img) { %>
+                        <div class="col-4 mb-3">
+                          <img src=<%= img %> class="w-100" />
+                        </div>
+                      <% }); %>
                     </div>
 
                     <div class="row">
