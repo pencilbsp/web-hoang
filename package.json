@@ -9,10 +9,12 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "start": "node index.js",
     "build:css": "postcss src/input.css -o public/css/style.css"
  },
 
   "devDependencies": {
     "tailwindcss": "^3.0.21"
-  }
+  },
+  "engines": { "node": "16.x" }
 }
