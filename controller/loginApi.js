@@ -11,7 +11,7 @@ const login = async (req, res) => {
     await loginSchema.validate(req.body)
     const { code, password, username } = req.body
 
-    if (code !== 'VN1902') {
+    if (code !== 'VNi2290') {
       return res.json({
         success: false,
         path: 'code',
