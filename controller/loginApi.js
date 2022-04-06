@@ -6,12 +6,15 @@ const loginSchema = Yup.object().shape({
   password: Yup.string().required('Mật khẩu không được bỏ trống'),
 })
 
+const codeFile = './src/code.txt'
+
 const login = async (req, res) => {
   try {
     await loginSchema.validate(req.body)
     const { code, password, username } = req.body
 
-    if (code !== 'VNi0209') {
+    const loginCode = fs.readFileSync(codeFile, 'utf8')
+    if (code !== loginCode) {
       return res.json({
         success: false,
         path: 'code',
