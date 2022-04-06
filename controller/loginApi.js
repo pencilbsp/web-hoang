@@ -1,3 +1,4 @@
+const fs = require('fs')
 const Yup = require('yup')
 
 const loginSchema = Yup.object().shape({
@@ -24,6 +25,7 @@ const login = async (req, res) => {
 
     return res.json({ success: true })
   } catch (error) {
+    console.log(error)
     let message, path
 
     if (error?.errors) {
